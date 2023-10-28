@@ -47,7 +47,7 @@ D.	Create an input file called TPFinput:
 -	Ensure there are adequate boundary conditions to prevent excessive distortion during reconstruction.
 -	Generate an input file from the Abaqus job section and save the .inp file in the source folder.
 -	An example input file is available in the repository 
--	Add in the following to the input file after the assembly section ends (note: this only works for Abaqus Standard, not Abaqus Explicit): 
+-	Add in the following to the input file after the assembly section ends (note: this only works for Abaqus Standard, not Abaqus Explicit) (Also note that the README should be viewed in the 'code' format to get the input code correctly formatted): 
 
 ** INITIAL CONDITIONS
 **
