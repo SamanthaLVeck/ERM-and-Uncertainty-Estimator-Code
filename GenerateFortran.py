@@ -23,15 +23,14 @@ converting to a .txt file.
 inputFileName='TPFfortran'
 
 # =============================================================================
-# Number of basis function per measurement width (so if you are doing a split
-# area on a beam if each side has 10 basis functions, enter 20 for the number
-# of basis functions and 10 for the number of basis functions per section). 
+# Number of basis function per measurement width.
 #
 # Measurement axis width is the width for the area where triangle pulse 
 # functions are being applied (upper - lower limit). 
 #
 # Eigenstrain upper and lower limits define the area where the triangle pulse
-# functions are being applied. 
+# functions are being applied. Upper should be the largest coord value. Lower
+# the lowest coord value. 
 # =============================================================================
 numberOfBasisFunctions=20
 
