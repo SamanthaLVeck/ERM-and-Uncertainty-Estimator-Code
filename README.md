@@ -186,4 +186,11 @@ NALL, 1.0
 
 # Part 3 - ERM Reconstruction Uncertainty Estimation
 
+1. Model Uncertainty:
+- Use ModelUncert.py
 
+2. Measured Data Uncertainty:
+- Use MeasuredDataUncert.py
+
+3. Total Uncertainty:
+- Use TotalUncertaintyRSS.py 
