@@ -2,31 +2,22 @@
 """
 Created on Wed Mar  1 14:49:32 2023
 
-@author: zy474653
+@author: Samantha Veck
+
+Coefficient calculation script weighted using the reference data set uncertatnty values. 
 """
 
 import numpy as np 
 import csv
 
 # =============================================================================
-# Name of csv files should be wriiten witout the file extension.
+# Name of csv files should be written witout the file extension.
 # =============================================================================
 
 refDataFileName = 'refXRDICHDCMAppendB2'
 refDataUncertFileName = 'refXRDICHDCMAppendB2UncertTrue'
 numberOfBasisFunctions=12
 sortCoordFile='sortedCoords'
-
-# =============================================================================
-# Here the coefficient calculation will be performed for the 500 data sets 
-# =============================================================================
-
-# =============================================================================
-# Name of csv files should be wriiten witout the file extension.
-# The input file is the name of the .csv file produced using the 
-# CoordSortScript without the basis function number of file extension. 
-# nuDataSets = number of RNG data sets produced (usually 500)
-# =============================================================================
     
 # =============================================================================
 # Gathering input data results into one csv file in the correct matrix format
