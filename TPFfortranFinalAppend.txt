@@ -1,0 +1,34 @@
+
+      if ((statev(2).GE.B(I)).and.(statev(2).LE.C(I))) then 
+          expan(1) = (((( C(I) - statev(2) )/( C(I) - B(I) ))* CK(I)) +
+     $ ((( statev(2) - A1(I) )/( B1(I) - A1(I) ))* CK(I+1)))
+	end if 
+	end do 
+      
+!---------------------------------------------------------------------!
+!
+!     Notes:
+!     
+!     Updating the solution dependant state variables 
+!
+!---------------------------------------------------------------------!
+    
+      statev(1) = statev(1)
+      statev(2) = statev(2)
+      statev(3) = statev(3)
+      statev(4) = expan(1)
+      statev(5) = expan(2)
+      statev(6) = expan(3)
+      
+      do I = 1,3
+          if (time(2).LE.1.0D0) then
+              expan(I) = 0.001 * expan(I) * dtime 
+          else
+              expan(I) = 0.0D0
+          end if
+      end do
+      
+      return 
+      end 
+      
+!---------------------------------------------------------------------------------------------------------------------------!
