@@ -18,7 +18,7 @@ A.	Create a source file for the analysis to be completed in:
 -	Copy the contents of this GitHub repository into the folder.
 
 B.	Update the TPFfortran text file:
--	Following the guidance in the code, change expan(*) values to describe the eigenstrain component direction and statev (*) values to describe the measurement axis. 
+-	Following the guidance in the code, change expan(* ) values to describe the eigenstrain component direction and statev(*) values to describe the measurement axis. 
 -	1, 2 and 3 represent the x, y and z axis respectively. 
 
 C.	Convert the reference stress, strain or displacement data into .csv format:
