@@ -17,6 +17,8 @@ import numpy as np
 
 # =============================================================================
 # Name of fortran files should be wriiten witout the file extension.
+# eigUpperLim1 = the highest coord value of the eigenstrain region bounadry
+# eigLowerLim1 = the lowest coord value of the eigenstrain region boundary
 # =============================================================================
 inputFileName='TPFfortranFinal'
 appendFileName='TPFfortranFinalAppend'
