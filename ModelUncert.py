@@ -4,7 +4,16 @@ Created on Tue 14 Feb 2023
 
 @author: Samantha Veck
 
+Model uncertainty script. 
 
+Update n and reconstructionDataFileName
+
+n = tpf number being evaluated
+a = lower range of tpf number being used to assess model uncertainty
+b = upper range of tpf number being used
+N = leave as is
+
+Recommend leave a and b as given. 
 
 """
 
