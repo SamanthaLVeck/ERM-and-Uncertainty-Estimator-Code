@@ -2,7 +2,9 @@
 """
 Created on Wed Mar  1 14:49:32 2023
 
-@author: zy474653
+@author: Samantha Veck 
+
+Measured data uncertainty script. 
 """
 
 import numpy as np 
@@ -16,12 +18,16 @@ refDataFileName = 'refXRDICHDCMAppendB2'
 refDataUncertFileName = 'refXRDICHDCMAppendB2Uncert'
 reconFileName = '10TPFinputFinalB2'
 numberOfBasisFunctions=20
-TPFNumberEachSide=10
 sortCoordFile='sortedCoords'
 
 # =============================================================================
 # mu = the mean for the normal distribution 
+# nuDataSets = how many Monte Carlo runs
+# nuDataPoints = how many reference measured data points
+# dataRows = the data row positions of the reconstruction odb generated csv file 
+# which match positions of the reference measured data positions
 # =============================================================================
+
 mu=0
 nuDataSets=500
 nuDataPoints=130
@@ -65,10 +71,7 @@ with open(refDataFileName + '.csv') as refDataSource:
 
 # =============================================================================
 # This section is where the random numbers are generated and added onto the 
-# perfect data. 
-#
-# Need to find out how to get the noiseDataArray into a matrix with the 
-# coord value included (2 coloums, 190 rows output to write file)
+# reconstruction data. 
 # =============================================================================
 
 for i in range(1,nuDataSets+1):
@@ -80,11 +83,7 @@ for i in range(1,nuDataSets+1):
     noiseDataMatrix = np.c_[transNoiseDataArray, drop0]
     refDataResult = np.savetxt('newRefData' + str(i) + '.csv', noiseDataMatrix, 
                                delimiter=',')
-        
-# =============================================================================
-# Here I need to add a section that delets coloumn 2 (1 for python) for 
-# all the RNG data sets and calls them 'refData' + str(i) + 'Stress.csv'
-# =============================================================================
+    
 
 
     stressDataOnly = np.delete(noiseDataMatrix, 1, 1)
@@ -226,4 +225,4 @@ averageRMSEFinal = np.average(pointwiseRMSEFinal)
 print('\nAverage RMSE for n')
 print(averageRMSEFinal)
 
-np.savetxt('pointwiseRMSEMeasured' + str(TPFNumberEachSide) + '.csv', pointwiseRMSEFinal, delimiter=',')
+np.savetxt('pointwiseRMSEMeasured' + str(numberOfBasisFunctions) + '.csv', pointwiseRMSEFinal, delimiter=',')
