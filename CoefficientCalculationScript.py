@@ -4,8 +4,7 @@ Created on Thu Jan 06 09:44:02 2022
 
 @author: Samantha Veck
 
-This is a script to perform the matrix maths operations on individual basis
-function results to produce coefficients for the eigenstrain distribution
+This is a script to produce final coefficients for the eigenstrain distribution
 function. 
 
 There will be two .csv files outputted, one to gather input data results
@@ -24,7 +23,10 @@ import numpy as np
 # Name of csv files should be wriiten witout the file extension.
 # The input file is the name of the .csv file produced using the 
 # CoordSortScript without the basis function number of file extension. 
+# referenceDataFileName is the reference data set csv file with stress, strain
+# or displacement values only (no coords)
 # =============================================================================
+
 inputFileName='sortedCoords'
 referenceDataFileName='refDataStress'
 numberOfBasisFunctions=20
