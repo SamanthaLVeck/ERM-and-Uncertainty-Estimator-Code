@@ -46,6 +46,7 @@ D.	Create an input file called TPFinput:
 -	Create a nodal set for all nodes called NALL (this is for temperature application).
 -	Ensure there are adequate boundary conditions to prevent excessive distortion during reconstruction.
 -	Generate an input file from the Abaqus job section and save the .inp file in the source folder.
+-	An example input file is available in the repository 
 -	Add in the following to the input file after the assembly section ends (note: this only works for Abaqus Standard, not Abaqus Explicit): 
 
 ** INITIAL CONDITIONS
@@ -149,6 +150,7 @@ NALL, 1.0
 
 5.	Coefficient calculation 
 -	Use CoefficientCalculationScript.py – update according to script instructions
+-	If the results are to be weighted use CoefficientCalculationScriptWeighted.py
 -	Run in the python environment 
 -	Coefficients of ± 0 to 10 seem to give sensible results on the bent beam max MPa around 250. 
 -	If multiple sources of reference data are being used to see the effect of different data on reconstruction results, different data sets can be inserted multiple times in step 5 without repeating previous steps providing that the same number and location of measurements are used. 
@@ -183,3 +185,5 @@ NALL, 1.0
 -	Read the .csv file of the final results 
 
 # Part 3 - ERM Reconstruction Uncertainty Estimation
+
+
