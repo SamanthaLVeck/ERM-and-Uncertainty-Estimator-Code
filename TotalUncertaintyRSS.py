@@ -2,7 +2,17 @@
 """
 Created on Tue Apr 18 21:15:31 2023
 
-@author: zy474653
+@author: Samantha Veck
+
+This script performs a root sum sqaure of the model uncert and measured data
+uncert results. 
+
+Pull in the file names from files outputted from the model uncert
+and measured data uncert python scripts. 
+
+Update the TPF number being evaluated. 
+
+Data rows is as described for the other uncert python files. 
 """
 
 import numpy as np
